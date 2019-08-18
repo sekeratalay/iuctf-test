@@ -5,9 +5,9 @@
     <title>İÜCTF - Scoreboard</title>
     <link rel="stylesheet" href="static/bootstrap.min.css">
     <link rel="stylesheet" href="static/score.css">
-    <script src="static/score.js"></script>
 </head>
 <body>
+    <canvas></canvas>
     <div class="container-fluid main">
         <div class="container-fluid logo-baslik">
             <div class="row">
@@ -26,38 +26,44 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th>OKUL</th>
-                        <th>TAKIM</th>
-                        <th>SKOR</th>
-                        <th>First-Blood</th>
+                        <th style="width: 10%">#</th>
+                        <th style="width: 25%">Okul</th>
+                        <th style="width: 30%">Takım</th>
+                        <th style="width: 20%">Skor</th>
+                        <th style="width: 15%">F-B</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="birinci">
+                        <td>1</td>
                         <td>Okul1</td>
                         <td>Takım1</td>
                         <td>Skor1</td>
                         <td>1</td>
                     </tr>
                     <tr class="ikinci">
+                        <td>2</td>
                         <td>Okul2</td>
                         <td>Takım2</td>
                         <td>Skor2</td>
                         <td>2</td>
                     </tr>
                     <tr class="ucuncu">
+                        <td>3</td>
                         <td>Okul3</td>
                         <td>Takım3</td>
                         <td>Skor3</td>
                         <td>3</td>
                     </tr>
                     <tr>
+                        <td>4</td>
                         <td>Okul4</td>
                         <td>Takım4</td>
                         <td>Skor4</td>
                         <td>4</td>
                     </tr>
                     <tr>
+                        <td>5</td>
                         <td>Okul5</td>
                         <td>Takım5</td>
                         <td>Skor5</td>
@@ -77,8 +83,15 @@
                 <div class="col">
                     <img src="img/tsgk-logo.png">
                 </div>
+                <div class="col">
+                    <img src="img/tsgk-logo.png">
+                </div>
+                <div class="col">
+                    <img src="img/tsgk-logo.png">
+                </div>
             </div>
         </div>
     </div>
+    <script src="static/score.js"></script>
 </body>
 </html>

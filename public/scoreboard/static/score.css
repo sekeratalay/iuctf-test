@@ -1,5 +1,8 @@
+body {
+    overflow: hidden;
+}
+
 .main {
-    background-color: aqua;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -13,7 +16,6 @@
 }
 
 .logo-baslik {
-    background-color: blueviolet;
     max-width: 90%;
     text-align: center;
     margin-top: 0.5rem;
@@ -21,6 +23,7 @@
 }
 
 .logo-baslik h1 {
+    color: aliceblue;
     margin-bottom: 0px;
     font-size: 50px;
     font-weight: bolder;
@@ -42,7 +45,7 @@
 
 .skor-tablosu table tbody td {
     text-align: center;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .table {
@@ -58,7 +61,7 @@
 }
 
 .ucuncu td {
-    font-size: 20px !important;
+    font-size: 23px !important;
 }
 
 .sponsor {
@@ -68,7 +71,6 @@
     left: 2rem;
     right: 2rem;
     text-align: center;
-    background-color: gray;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
