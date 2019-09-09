@@ -20,7 +20,7 @@ class Categories extends \App\Controllers\BaseController
 
 	//--------------------------------------------------------------------
 
-	public function store()
+	public function create()
 	{
 		$category_model = new CategoryModel();
 		$data = [

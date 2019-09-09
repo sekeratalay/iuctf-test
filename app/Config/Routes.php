@@ -83,7 +83,7 @@ $routes->group('admin', function($routes)
 	$routes->group('categories', function($routes)
 	{
 		$routes->get('/', 'Admin/Categories::index');
-		$routes->post('/', 'Admin/Categories::store');
+		$routes->post('/', 'Admin/Categories::create');
 	});
 
 	$routes->group('challenges', function($routes)
@@ -91,7 +91,31 @@ $routes->group('admin', function($routes)
 		$routes->get('/', 'Admin/Challenges::index');
 		$routes->post('/', 'Admin/Challenges::store');
 	});
+
+	$routes->group('teams', function($routes)
+	{
+		$routes->get('/', 				'App\Controllers\Admin\Teams::index');
+		$routes->get('new', 			'App\Controllers\Admin\Teams::new');
+		$routes->get('(:id)/edit', 		'App\Controllers\Admin\Teams::edit/$1');
+		$routes->get('(:id)', 			'App\Controllers\Admin\Teams::show/$1');
+		$routes->post('/', 				'App\Controllers\Admin\Teams::create');
+		$routes->post('(:id)/delete',	'App\Controllers\Admin\Teams::delete/$1');
+		$routes->post('(:id)', 			'App\Controllers\Admin\Teams::update/$1');
+	});
+
+	$routes->group('users', function($routes)
+	{
+		$routes->get('/', 				'App\Controllers\Admin\Users::index');
+		$routes->get('new', 			'App\Controllers\Admin\Users::new');
+		$routes->get('(:id)/edit', 		'App\Controllers\Admin\Users::edit/$1');
+		$routes->get('(:id)', 			'App\Controllers\Admin\Users::show/$1');
+		$routes->post('/', 				'App\Controllers\Admin\Users::create');
+		$routes->post('(:id)/delete',	'App\Controllers\Admin\Users::delete/$1');
+		$routes->post('(:id)', 			'App\Controllers\Admin\Users::update/$1');
+	});
+
 });
+$routes->resource('users', ['websafe' => 1, 'placeholder' => '(:id)', 'controller' => 'App\Controllers\Admin\Users']);
 
 $routes->group('api', function($routes)
 {

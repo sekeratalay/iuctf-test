@@ -66,6 +66,7 @@ class InitialTables extends Migration
 			'team_id' => [
 				'type' => 'INT',
 				'unsigned' => true,
+				'null' => true,
 			],
 			'username' => [
 				'type' => 'varchar',
