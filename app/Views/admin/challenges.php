@@ -90,7 +90,7 @@
                             <td><?= esc($challenge["created_at"]) ?></td>
                             <td><?= esc($challenge["updated_at"]) ?></td>
 							<td><button class="btn btn-danger btn-block">Delete</button></td>
-							<td><button class="btn btn-info btn-block">Update</button></td>
+							<td><a class="btn btn-info btn-block" href="/admin/challenges/<?= esc($challenge["id"]) ?>">Detail</a></td>
                         </tr>
 					<?php endforeach ?>
                     </tbody>

@@ -40,4 +40,16 @@ class Challenges extends \App\Controllers\BaseController
 
 		return redirect()->to('/admin/challenges');
 	}
+
+	public function show($id)
+	{
+		$challenge = $this->challenge_model->find($id);
+		$view_data["challenge"] = $challenge;
+		return view('admin/challenge_detail', $view_data);
+	}
+
+	public function addFlag()
+	{
+		$this->request->getVar('point');
+	}
 }

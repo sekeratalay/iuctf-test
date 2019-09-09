@@ -62,7 +62,7 @@ $routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
-$routes->setAutoRoute(true);
+$routes->setAutoRoute(false);
 
 /**
  * --------------------------------------------------------------------
@@ -77,7 +77,7 @@ $routes->get('/', 'Home::index');
 $routes->group('admin', function($routes)
 {
 	$routes->get('/', 'Admin::index');
-	$routes->get('sorular', 'Admin::challenges');
+	// $routes->get('sorular', 'Admin::challenges');
 	$routes->post('categoryadd', 'Admin::categoryadd');
 
 	$routes->group('categories', function($routes)
@@ -89,6 +89,7 @@ $routes->group('admin', function($routes)
 	$routes->group('challenges', function($routes)
 	{
 		$routes->get('/', 'Admin/Challenges::index');
+		$routes->get('(:num)', 'App\Controllers\Admin\Challenges::show/$1');
 		$routes->post('/', 'Admin/Challenges::store');
 	});
 
@@ -96,11 +97,11 @@ $routes->group('admin', function($routes)
 	{
 		$routes->get('/', 				'App\Controllers\Admin\Teams::index');
 		$routes->get('new', 			'App\Controllers\Admin\Teams::new');
-		$routes->get('(:id)/edit', 		'App\Controllers\Admin\Teams::edit/$1');
-		$routes->get('(:id)', 			'App\Controllers\Admin\Teams::show/$1');
+		$routes->get('(:num)/edit', 		'App\Controllers\Admin\Teams::edit/$1');
+		$routes->get('(:num)', 			'App\Controllers\Admin\Teams::show/$1');
 		$routes->post('/', 				'App\Controllers\Admin\Teams::create');
-		$routes->post('(:id)/delete',	'App\Controllers\Admin\Teams::delete/$1');
-		$routes->post('(:id)', 			'App\Controllers\Admin\Teams::update/$1');
+		$routes->post('(:num)/delete',	'App\Controllers\Admin\Teams::delete/$1');
+		$routes->post('(:num)', 			'App\Controllers\Admin\Teams::update/$1');
 	});
 
 	$routes->group('users', function($routes)

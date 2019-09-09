@@ -10,6 +10,6 @@ class CategoryModel extends Model
 
 	protected $validationRules = [
 		'name'			=> 'required|min_length[3]',
-		'description'	=> '',
+		// 'description'	=> '',
 	];
 }

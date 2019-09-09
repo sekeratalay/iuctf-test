@@ -25,10 +25,10 @@ class Admin extends BaseController
 
 	//--------------------------------------------------------------------
 
-	public function challenges()
-	{
-		return view("admin/challenges");
-	}
+	//public function challenges()
+	//{
+	//	return view("admin/challenges");
+	//}
 
 	//--------------------------------------------------------------------
 
