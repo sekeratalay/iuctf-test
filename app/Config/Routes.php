@@ -74,6 +74,33 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+$routes->group('admin', function($routes)
+{
+	$routes->get('/', 'Admin::index');
+	$routes->get('sorular', 'Admin::challenges');
+	$routes->post('categoryadd', 'Admin::categoryadd');
+
+	$routes->group('categories', function($routes)
+	{
+		$routes->get('/', 'Admin/Categories::index');
+		$routes->post('/', 'Admin/Categories::store');
+	});
+
+	$routes->group('challenges', function($routes)
+	{
+		$routes->get('/', 'Admin/Challenges::index');
+		$routes->post('/', 'Admin/Challenges::store');
+	});
+});
+
+$routes->group('api', function($routes)
+{
+	$routes->group('categories', function($routes)
+	{
+		$routes->get('/', 'Api/Categories::index');
+	});
+});
+
 /**
  * --------------------------------------------------------------------
  * Additional Routing
