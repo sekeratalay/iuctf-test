@@ -1,0 +1,81 @@
+body {
+    overflow: hidden;
+}
+
+.main {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.logo-sag img, .logo-sol img {
+    width: 80px;
+    height: auto;
+}
+
+.logo-baslik {
+    max-width: 90%;
+    text-align: center;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0 0.5rem 0;
+}
+
+.logo-baslik h1 {
+    color: aliceblue;
+    margin-bottom: 0px;
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.skor-tablosu {
+    background-color: chocolate;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0px;
+    max-width: 90%;
+}
+
+.skor-tablosu table thead th {
+    text-align: center;
+    background-color: antiquewhite;
+    font-size: 40px;
+}
+
+.skor-tablosu table tbody td {
+    text-align: center;
+    font-size: 20px;
+}
+
+.table {
+    margin-bottom: 0px;
+}
+
+.birinci td {
+    font-size: 30px !important;
+}
+
+.ikinci td {
+    font-size: 25px !important;
+}
+
+.ucuncu td {
+    font-size: 23px !important;
+}
+
+.sponsor {
+    max-width: 90%;
+    position: fixed;
+    bottom: 0.5rem;
+    left: 2rem;
+    right: 2rem;
+    text-align: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.sponsor img {
+    max-width: 100px;
+    height: auto;
+}
