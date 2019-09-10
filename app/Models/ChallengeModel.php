@@ -6,7 +6,7 @@ class ChallengeModel extends Model
 {
 	protected $table      = 'challenges';
 	protected $primaryKey = 'id';
-	protected $allowedFields = ['category_id','name', 'description', 'max_attempts', 'type', 'is_active'];
+	protected $allowedFields = ['category_id', 'name', 'description', 'point', 'max_attempts', 'type', 'is_active'];
 
 	protected $validationRules = [
 		'category_id'   => 'required|numeric',

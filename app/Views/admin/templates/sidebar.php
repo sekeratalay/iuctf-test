@@ -6,6 +6,12 @@
         </a>
     </li>
     <li class="nav-item active">
+        <a class="nav-link" href="/challenges">
+            <i class="fas fa-gamepad"></i>
+            <span>Soru Sayfası</span>
+        </a>
+    </li>
+    <li class="nav-item active">
         <a class="nav-link" href="/admin/categories">
             <i class="fas fa-bookmark"></i>
             <span>Kategoriler</span>

@@ -73,6 +73,7 @@ $routes->setAutoRoute(false);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+$routes->get('/challenges', 'Home::challenges');
 
 $routes->group('admin', function($routes)
 {
@@ -90,6 +91,8 @@ $routes->group('admin', function($routes)
 	{
 		$routes->get('/', 'Admin/Challenges::index');
 		$routes->get('(:num)', 'App\Controllers\Admin\Challenges::show/$1');
+		$routes->post('(:num)', 'App\Controllers\Admin\Challenges::update/$1');
+		$routes->post('(:num)/addflag', 'App\Controllers\Admin\Challenges::addFlag/$1');
 		$routes->post('/', 'Admin/Challenges::store');
 	});
 
