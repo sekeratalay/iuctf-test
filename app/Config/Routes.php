@@ -74,6 +74,7 @@ $routes->setAutoRoute(false);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/challenges', 'Home::challenges');
+$routes->post('/flagsubmit', 'Home::flagSubmit');
 
 $routes->group('admin', function($routes)
 {
