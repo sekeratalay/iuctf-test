@@ -62,6 +62,7 @@
 	</div>
 
 	<script>
+		// modal events
 		$('#challenge-modal').on('show.bs.modal', function (event) {
 			var button = $(event.relatedTarget);
 			console.log(button);
@@ -73,6 +74,7 @@
 			$(this).find(".ch-id").val(button.find(".ch-id").text());
 		});
 
+		// clear challenge info when modal hide
 		$('#challenge-modal').on('hide.bs.modal', function () {
 			$(this).find(".modal-ch-title").text("");
 			$(this).find(".modal-ch-des").text("");
