@@ -39,7 +39,7 @@ class Home extends BaseController
 		}
 
 		$team_id = 1;
-		$view_data['solves'] = $this->solvesModel->where('team_id', 1)->findColumn('challenge_id');
+		$view_data['solves'] = $this->solvesModel->where('team_id', 1)->findColumn('challenge_id') ?? [];
 
 		$view_data['categories'] = $categories;
 		// var_dump($view_data['categories']);
